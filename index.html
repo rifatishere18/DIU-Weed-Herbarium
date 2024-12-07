@@ -207,19 +207,21 @@
             <td><a href="Chechra/"><i>Scirpus mucronatus</i></a></td>
             <td>Cyperaceae</td>
           </tr>
-          <td>Choto Shama</td>
-          <td><a href="Choto Shama/"><i>Echinochloa colonum</i></a></td>
-          <td>Poaceae</td>
-        </tr>
+          <tr>
+            <td>Choto Shama</td>
+            <td><a href="Choto Shama/"><i>Echinochloa colonum</i></a></td>
+            <td>Poaceae</td>
+          </tr>
           <tr>
             <td>Durba</td>
             <td><a href="Durba/"><i>Cynodon dactylon</i> (L.) Pers.</a></td>
             <td>Poaceae</td>
           </tr>
-          <td>Holde Mutha</td>
-          <td><a href="Holde Mutha/"><i>Cyperus esculentus</i></a></td>
-          <td>Cyperaceae</td>
-        </tr>
+          <tr>
+            <td>Holde Mutha</td>
+            <td><a href="Holde Mutha/"><i>Cyperus esculentus</i></a></td>
+            <td>Cyperaceae</td>
+          </tr>
           <tr>
             <td>Joyna</td>
             <td><a href="Joyna/"><i>Fimbristylis miliacea</i></a></td>
@@ -292,11 +294,13 @@
 
         cells.forEach(cell => {
           const cellText = cell.textContent.toLowerCase();
+          const originalText = cell.innerHTML;
           if (cellText.includes(input)) {
             rowContainsSearchTerm = true;
-            cell.classList.add("highlight");
+            const regex = new RegExp(`(${input})`, 'gi');
+            cell.innerHTML = originalText.replace(regex, '<span class="highlight">$1</span>');
           } else {
-            cell.classList.remove("highlight");
+            cell.innerHTML = originalText.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
           }
         });
 
