@@ -283,6 +283,7 @@
   <script>
     function performSearch() {
       const input = document.getElementById("searchInput").value.toLowerCase();
+      if (!input) return;
       const rows = document.querySelectorAll("#weedTable tr");
 
       rows.forEach(row => {
