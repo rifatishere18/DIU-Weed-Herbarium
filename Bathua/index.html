@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bathua</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f9f9f9;
+      color: #000000;
+      text-align: center;
+      padding: 10px 1px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      padding: 20px 40px;
+    }
+
+    .section-title {
+      color: #362bb0;
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      font-size: 21px;
+      color: #2b6cb0;
+    }
+
+    .sc{
+      font-style: italic;
+    }
+
+    .gallery {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      color: #0d53cb;
+      margin-bottom: 20px;
+      font-size: 22px;
+      text-decoration: underline;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #228B22;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    #back-to-top:hover {
+      background-color: #196619;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bathua</h1>
+  </header>
+
+  <section>
+    <p><span class="highlight">Local name:</span> Bathua</p>
+    <p><span class="highlight">English name:</span> Lambsquarter</p>
+    <p><span class="highlight">Scientific name:</span> <span class="sc"> Chenopodium album</span></p>
+    <p><span class="highlight">Family:</span> Chenopodioideae</p>
+
+    <h2 class="section-title">Habit</h2>
+    <p>Annual, erect herbaceous broad leaf weed.    </p>
+
+    <h2 class="section-title">Habitat</h2>
+    <p>Found in the fields of almost all rabi crops. Also found in aus rice, mixed aus-broadcast aman rice and jute. Even it is found in the levee of crop fields, and irrigation channel.</p>
+
+    <h2 class="section-title">Growing season</h2>
+    <p>Rabi and Kharif [January-December].</p>
+
+    <h2 class="section-title">Associated crops</h2>
+    <p>Wheat, barley, maize, sorghum, mustard, winter vegetables, potato etc.</p>
+
+    <h2 class="section-title">Propagating organ</h2>
+    <p>Seed. Prolific seed producer. Seeds have long viability.    </p>
+
+    <h2 class="section-title">Leaf</h2>
+    <p>Simple, entire, rhombic, ovate to lanceolate, extremely variable, white green below and dark green above. </p>
+
+    <h2 class="section-title">Stem</h2>
+    <p>Erect, much branched, glabrous, grooved.</p>
+
+    <h2 class="section-title">Inflorescence</h2>
+    <p>Arises from the leaf axils and terminus of the stem and branches.</p>
+
+    <h2 class="section-title">Root</h2>
+    <p>Tap root system.</p>
+
+    <h2 class="section-title">Control measures</h2>
+    <p>Hand weeding, ploughing and foliage applied herbicides.</p>
+  </section>
+  
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <img src="bathua_01.jpg" alt="Bathua Image 1">
+        <img src="bathua_02.jpg" alt="Bathua Image 2">
+        <img src="cheal_03.jpg" alt="Bathua Image 3">
+        <img src="cheal_04.jpg" alt="Bathua Image 4">
+        <img src="cheal_05.jpg" alt="Bathua Image 5">
+        <img src="cheal_06.jpg" alt="Bathua Image 6">
+        <img src="cheal_07.jpg" alt="Bathua Image 7">
+        <img src="cheal_08.jpg" alt="Bathua Image 8">
+        <img src="cheal_75.jpg" alt="Bathua Image 9">
+      </div>
+    </section>
+  </body>
+  <script>
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        window.open(img.src, '_blank');
+      });
+    });
+  </script>
+
+<button id="back-to-top">↑</button>
+
+<script>
+  // Smooth scrolling for Back to Top button
+  document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+
+</html>
